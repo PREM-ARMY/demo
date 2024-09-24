@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6078a3;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group.inline {
+            display: inline-block;
+            width: calc(50% - 10px);
+        }
+
+        @media (max-width: 768px) {
+            .form-group.inline {
+                width: 100%;
+            }
+        }
+
+        .divider {
+            border-bottom: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sports Event Registration Form</h1>
+    <form action="/submit-registration" method="post">
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer-not-say">Prefer not to say</option>
+            </select>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Street" required>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            <input type="text" id="zip" name="zip" placeholder="Zip Code" required>
+        </div>
+
+        <!-- Sport -->
+        <div class="form-group">
+            <label for="sport">Sport/Event Participating In:</label>
+            <select id="sport" name="sport" required>
+                <option value="">Select Sport</option>
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="tennis">Tennis</option>
+                <option value="running">Running (Marathon)</option>
+                <option value="badminton">Badminton</option>
+                <option value="cricket">Cricket</option>
+            </select>
+        </div>
+
+        <!-- Team Name -->
+        <div class="form-group">
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName" name="teamName">
+        </div>
+
+        <!--Team Participation -->
+        <div class="form-group">
+            <label for="participation">Participation:</label>
+            <select id="participation" name="participation" required>
+                <option value="individual">Individual</option>
+                <option value="team">Team</option>
+            </select>
+        </div>
+
+        <!-- Emergency Contact Name -->
+        <div class="form-group">
+            <label for="emergencyContactName">Emergency Contact Name:</label>
+            <input type="text" id="emergencyContactName" name="emergencyContactName" required>
+        </div>
+
+        <!-- Emergency Contact Number -->
+        <div class="form-group">
+            <label for="emergencyContactNumber">Emergency Contact Number:</label>
+            <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" required>
+        </div>
+
+        <!-- T-shirt Size -->
+        <div class="form-group">
+            <label for="tshirtSize">T-shirt Size:</label>
+            <select id="tshirtSize" name="tshirtSize" required>
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+                <option value="XXL">Extra Extra Large (XXL)</option>
+            </select>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="medicalConditions">Medical Conditions/Allergies:</label>
+            <textarea id="medicalConditions" name="medicalConditions" rows="4" cols="50"></textarea>
+        </div>
+
+    
+        <div class="form-group">
+            <label for="experience">Previous Experience in the Sport:</label>
+            <select id="experience" name="experience" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="experienceLevel">Experience Level:</label>
+            <select id="experienceLevel" name="experienceLevel" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+
+     
+        <div class="form-group">
+            <label for="paymentMethod">Registration Fee Payment Method:</label>
+            <div class="radio-group">
+                <input type="radio" id="online" name="paymentMethod" value="online" required> Online (Credit/Debit Card)
+                <input type="radio" id="offline" name="paymentMethod" value="offline"> Offline (Cash/Check)
+            </div>
+        </div>
+
+      
+        <div class="form-group">
+            <label for="waiverConsent">Waiver and Consent Form Agreement:</label>
+            <div class="radio-group">
+                <input type="radio" id="agree" name="waiverConsent" value="agree" required> I agree
+                <input type="radio" id="disagree" name="waiverConsent" value="disagree"> I do not agree
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="eventTiming">Preferred Event Timing:</label>
+            <select id="eventTiming" name="eventTiming" required>
+                <option value="morning">Morning (9 AM - 12 PM)</option>
+                <option value="afternoon">Afternoon (1 PM - 4 PM)</option>
+                <option value="evening">Evening (5 PM - 8 PM)</option>
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="accommodation">Accommodation Required:</label>
+            <div class="radio-group">
+                <input type="radio" id="accommodationYes" name="accommodation" value="yes"> Yes
+                <input type="radio" id="accommodationNo" name="accommodation" value="no"> No
+            </div>
+        </div>
+
+      
+        <div class="form-group">
+            <label for="termsConsent">Signature/Consent for Event Terms & Conditions:</label>
+            <div class="radio-group">
+                <input type="radio" id="termsAgree" name="termsConsent" value="agree" required> I agree
+                <input type="radio" id="termsDisagree" name="termsConsent" value="disagree"> I do not agree
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+
+</body>
+</html>

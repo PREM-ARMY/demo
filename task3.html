@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, nav, section, aside, footer {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1.7px solid #080808;
+        }
+        header{
+            background-image: url(images/f1.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 100px;
+            text-align: right;
+        }
+        .sidebar {
+            float: right;
+            width: 30%;
+        }
+        .content {
+            float: left;
+            width: 65%;
+        }
+        footer {
+            clear: both;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1 style="text-align: center; color: #0d0d0c; font-size: 80px;">My Food Blog</h1>
+        
+        <img src="images/f1.jpeg" alt="Blog Logo" width="350">
+    </header>
+
+    <nav style="text-align: left;">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Featured Recipe section -->
+        <section id="featured-recipe">
+            <h2>Indian Recipe: The Great Indian Thali</h2>
+            <img src="images/i1.jpg" alt="Spaghetti Bolognese" width="300">
+            
+
+            <h3>Ingredients</h3>
+            <ul>
+                <li>wheat bread</li>
+                <li> minced beef</li>
+                <li>1 onion, chopped</li>
+                <li>2 cloves garlic, minced</li>
+                <li>400g canned tomatoes</li>
+                <li>Salt and pepper</li>
+                <li>Parmesan cheese (optional)</li>
+            </ul>
+
+            <!-- Instructions -->
+            <h3>Instructions</h3>
+            <ol>
+                <li>Boil the spaghetti according to package instructions.</li>
+                <li>In a pan, sauté the onions and garlic until soft.</li>
+                <li>Add the minced beef and cook until browned.</li>
+                <li>Pour in the canned tomatoes and season with salt and pepper.</li>
+                <li>Simmer for 20 minutes.</li>
+                <li>Serve the sauce over the cooked spaghetti and garnish with Parmesan cheese.</li>
+            </ol>
+        </section>
+
+        <!-- Quick Facts table -->
+        <section id="quick-facts">
+            <h3>Quick Facts</h3>
+            <table border="1">
+                <tr>
+                    <td><strong>Prep Time:</strong></td>
+                    <td>30 minutes</td>
+                </tr>
+                <tr>
+                    <td><strong>Cook Time:</strong></td>
+                    <td>80 minutes</td>
+                </tr>
+                <tr>
+                    <td><strong>Servings:</strong></td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Leave a Comment form -->
+        <section id="comment-form">
+            <h3>Leave a Comment</h3>
+            <form action="/submit-comment" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </div>
+
+    
+    <aside class="sidebar">
+        <h3>Related Recipes</h3>
+        <ul>
+            <li><a href="#">Chicken dhum biryani</a></li>
+            <li><a href="#">subbaya hotel</a></li>
+            <li><a href="#">measala raju kodi palav</a></li>
+            <li><a href="#">milatary hotel</a></li>
+            <li><a href="#">golapalam palav</a></li>
+            <li><a href="#">yati</a></li>
+        </ul>
+    </aside>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 My Food Blog @Desgined by Prem</p>
+        <p>Follow me on 
+            <a href="https://twitter.com">whatsup</a>, 
+            <a href="https://facebook.com">Facebook</a>, 
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+    </footer>
+
+</body>
+</html>

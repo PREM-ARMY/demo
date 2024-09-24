@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .otp-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .otp-container h2 {
+            margin-bottom: 20px;
+        }
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .otp-inputs input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="otp-container">
+    <h2>OTP Verification</h2>
+    <form id="otpForm" onsubmit="return verifyOTP()">
+        <div class="otp-inputs">
+            <input type="text" maxlength="1" id="otp1" required>
+            <input type="text" maxlength="1" id="otp2" required>
+            <input type="text" maxlength="1" id="otp3" required>
+            <input type="text" maxlength="1" id="otp4" required>
+            <input type="text" maxlength="1" id="otp5" required>
+            <input type="text" maxlength="1" id="otp6" required>
+        </div>
+        <button type="submit">Verify OTP</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

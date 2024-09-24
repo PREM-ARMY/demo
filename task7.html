@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="file"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #42ad5b;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-group.inline {
+            display: inline-block;
+            width: calc(50% - 10px);
+        }
+
+        .divider {
+            border-bottom: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        
+
+        @media (max-width: 768px) {
+            .form-group.inline {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+    <form action="/submit-registration" method="post" enctype="multipart/form-data">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <!-- Dob -->
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!--  Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Street" required>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            <input type="text" id="zip" name="zip" placeholder="Zip Code" required>
+        </div>
+
+        <!-- Nationality -->
+        <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+        </div>
+
+        <!-- Parent Name -->
+        <div class="form-group">
+            <label for="parentName">Parent/Guardian Name:</label>
+            <input type="text" id="parentName" name="parentName" required>
+        </div>
+
+        <!-- Parent Contact Number -->
+        <div class="form-group">
+            <label for="parentContact">Parent/Guardian Contact Number:</label>
+            <input type="tel" id="parentContact" name="parentContact" required>
+        </div>
+
+        <!--  School Name -->
+        <div class="form-group">
+            <label for="highSchoolName">High School Name:</label>
+            <input type="text" id="highSchoolName" name="highSchoolName" required>
+        </div>
+
+        <!-- High School  Year -->
+        <div class="form-group">
+            <label for="gradYear">High School Graduation Year:</label>
+            <input type="number" id="gradYear" name="gradYear" required>
+        </div>
+
+        <!-- Previous Academic Qualification -->
+        <div class="form-group">
+            <label for="qualification">Previous Academic Qualification:</label>
+            <input type="text" id="qualification" name="qualification" required>
+        </div>
+
+        <!-- Percentage/Grades -->
+        <div class="form-group">
+            <label for="grades">Percentage/Grades in Last Qualification:</label>
+            <input type="text" id="grades" name="grades" required>
+        </div>
+
+        <!-- Courser -->
+        <div class="form-group">
+            <label for="course">Course/Program Applied For:</label>
+            <input type="text" id="course" name="course" required>
+        </div>
+
+        <!-- Study -->
+        <div class="form-group">
+            <label for="studyMode">Preferred Mode of Study:</label>
+            <select id="studyMode" name="studyMode" required>
+                <option value="">Select Mode</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+            </select>
+        </div>
+
+        <!-- Extracurricular Activities -->
+        <div class="form-group">
+            <label for="activities">Extracurricular Activities:</label>
+            <textarea id="activities" name="activities" rows="3"></textarea>
+        </div>
+
+        <!-- Sports-->
+        <div class="form-group">
+            <label for="sports">Sports Participation (if any):</label>
+            <input type="text" id="sports" name="sports">
+        </div>
+
+        <!-- Medical Condition -->
+        <div class="form-group">
+            <label for="medical">Disability/Medical Condition (if applicable):</label>
+            <textarea id="medical" name="medical" rows="3"></textarea>
+        </div>
+
+        <!-- Documents-->
+        <div class="form-group">
+            <label for="documents">Documents Upload (e.g., Passport-size Photo, Academic Certificates):</label>
+            <input type="file" id="documents" name="documents" multiple required>
+        </div>
+
+        <!-- Signature-->
+        <div class="form-group">
+            <label for="termsConsent">Signature/Consent for Terms and Conditions:</label>
+            <div class="radio-group">
+                <input type="radio" id="agree" name="termsConsent" value="agree" required> I agree
+                <input type="radio" id="disagree" name="termsConsent" value="disagree"> I do not agree
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="Register" class="submit-btn">
+        </div>
+    </form>
+
+</body>
+</html>

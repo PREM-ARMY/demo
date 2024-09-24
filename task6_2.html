@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: lightgray;
+        }
+        .highlight {
+            background-color: lightpink;
+        }
+        .coordinator, .local-rep {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Region Management Table</h2>
+
+<table>
+    <tr>
+        <th>Region</th>
+        <th>Manager</th>
+        <th class="coordinator">Coordinator</th>
+        <th class="local-rep">Local Rep</th>
+        <th>Secretary</th>
+    </tr>
+    <tr>
+        <td>North</td>
+        <td>Adam</td>
+        <td class="coordinator">Beth</td>
+        <td class="local-rep">Callum</td>
+        <td>Diane</td>
+    </tr>
+    <tr>
+        <td>South West</td>
+        <td colspan="3" rowspan="3">Annie</td>
+        <td class="">Dodie</td>
+        
+        
+    </tr>
+    <tr>
+        <td  class="highlight">South East Upper</td>
+        <td>Dylan</td>
+        
+    </tr>
+    <tr class="">
+        <td>South East <span style="background-color:lightpink;">Lower</span></td>
+        <td>Dahlia</td>
+        
+    </tr>
+    <tr>
+        <td>East</td>
+        <td>Ash</td>
+        <td class="coordinator">Bill</td>
+        <td class="local-rep">Cecilia</td>
+        <td>Dave</td>
+    </tr>
+    <tr>
+        <td>West</td>
+        <td>Art</td>
+        <td class="coordinator">Bruce</td>
+        <td class="local-rep">Colin</td>
+        <td>Danny</td>
+    </tr>
+</table>
+
+</body>
+</html>
